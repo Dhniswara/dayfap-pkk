@@ -1,0 +1,176 @@
+:root {
+      --primary-color: #0074D9;   /* biru terang */
+      --dark-blue: #001f3f;       /* biru tua */
+      --light-bg: #f4f4f4;        /* abu terang */
+      --text-color: #333;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: rgb(230, 224, 224);
+      color: var(--text-color);
+    }
+
+    header {
+      background: linear-gradient(120deg, var(--dark-blue), var(--primary-color));
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 1.2em;
+    }
+
+    .dayfap{
+        margin: 0;
+        height: 50px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .dayfap p {
+        margin: 0;
+    }
+
+    .menu-nav {
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .wrapper {
+        width: 100%;
+        display:  flex;
+        justify-content: space-around;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+      margin: 0px;
+    }
+
+    nav a {
+      color: var(--dark-blue);
+      text-decoration: none;
+      font-weight: 600;
+      padding-bottom: 4px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 0;
+      background: var(--primary-color);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 0 0 0;
+    }
+
+    .card {
+      background: linear-gradient(120deg, var(--dark-blue), var(--primary-color));
+      color: #ccc;
+      padding: 30px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 300px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 16px;
+      width: 100%;
+      padding: 12px 4px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      outline: 2px solid var(--primary-color);
+    }
+
+    form button {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #005fa3;
+    }
+
+    #formMessage {
+      color: var(--primary-color);
+      font-weight: bold;
+      display: none;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: var(--dark-blue);
+      padding: 25px 0;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
